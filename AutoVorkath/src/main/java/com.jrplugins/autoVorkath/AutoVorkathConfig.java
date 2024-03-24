@@ -16,8 +16,7 @@ import java.awt.*;
 @ConfigGroup("AutoVorkath")
 public interface AutoVorkathConfig extends Config {
 
-    @ConfigItem(
-            keyName = "crossbow",
+    @ConfigItem(keyName = "crossbow",
             name = "Crossbow",
             description = "Choose your crossbow",
             position = 0
@@ -191,4 +190,12 @@ public interface AutoVorkathConfig extends Config {
     default String FOOD() {
         return "Shark";
     }
+
+@ConfigItem(
+        keyName = "runePouch",
+        name = "Rune Pouch",
+        description = "What rune pouch to use?",
+        position = 17
+)
+    default RUNEPOUCH RUNEPOUCH() { return RUNEPOUCH.DIVINE_RUNE_POUCH; }
 }
